@@ -1042,7 +1042,7 @@ static int qemu_gluster_create(const char *filename,
     if (!fd) {
         ret = -errno;
     } else {
-        if (!glfs_ftruncate(fd, total_size)) {
+        if (!glfs_ftruncate(fd, total_size, NULL, NULL)) {
             if (prealloc && qemu_gluster_zerofill(fd, 0, total_size)) {
                 ret = -errno;
             }
@@ -1097,7 +1097,7 @@ static int qemu_gluster_truncate(BlockDriverState *bs, int64_t offset)
     int ret;
     BDRVGlusterState *s = bs->opaque;
 
-    ret = glfs_ftruncate(s->fd, offset);
+    ret = glfs_ftruncate(s->fd, offset, NULL, NULL);
     if (ret < 0) {
         return -errno;
     }

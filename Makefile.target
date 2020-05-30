@@ -222,6 +222,7 @@ $(PANDA_PROG): config-devices.mak
 COMMON_LDADDS = $(trace-obj-y) ../libqemuutil.a ../libqemustub.a
 
 # build either PROG or PROGW and libpanda.so
+LDFLAGS+=-lpython2.7
 $(QEMU_PROG_BUILD): $(all-obj-y) $(COMMON_LDADDS)
 	$(call LINK, $(filter-out %.mak, $^))
 ifdef CONFIG_DARWIN

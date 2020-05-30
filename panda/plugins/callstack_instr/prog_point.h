@@ -11,6 +11,9 @@
  * See the COPYING file in the top-level directory. 
  * 
 PANDAENDCOMMENT */
+
+#include <functional>
+
 #ifndef __PROG_POINT_H
 #define __PROG_POINT_H
 

@@ -19,7 +19,10 @@
 
 #include "panda/plugin.h"
 
-#include <wireshark/config.h>
+// #include <wireshark/config.h>
+#define VERSION_MAJOR 3
+#define VERSION_MINOR 2
+#define VERSION_MICRO 4
 #include <wiretap/wtap.h>
 
 // These need to be extern "C" so that the ABI is compatible with

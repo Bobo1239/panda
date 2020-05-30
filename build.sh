@@ -181,6 +181,7 @@ fi
 ## Configure/compile/test.
 msg "Configuring PANDA..."
 "${PANDA_DIR_REL}/configure" \
+    --extra-cflags="-Wno-format-truncation -Wno-error" \
     --target-list=$TARGET_LIST \
     --prefix=$prefix \
     $COMPILER_CONFIG \

@@ -1,7 +1,7 @@
 #include "qemu/osdep.h"
 #include "qemu/error-report.h"
 #include "hw/sysbus.h"
-#include <Python.h>
+#include <python2.7/Python.h>
 
 #ifdef TARGET_ARM
 #include "target/arm/cpu.h"
